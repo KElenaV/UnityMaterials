@@ -13,8 +13,7 @@
 * **transform.DOMove(new Vector3(0, 4, 0), 3).From();**
 * **transform.DOMove(new Vector3(0, 4, 0), 3)From(false);**
 * **From(false) значит IsRelative = false** - объект начинает движение со своего местоположения, и перемещается в координаты, указанные в DoMove. Координаты в коде - это глобальные координаты.
-
-
+###
 * **transform.DOMove(new Vector3(0, 4, 0), 3).From(true);**
 * **From(true) значит IsRelative = true** - объект начинает движение с координаты (текущее положение + DoMove) и двигается к координатам в которых был расположен при запуске игры.
 ##

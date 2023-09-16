@@ -4,8 +4,7 @@
 
 Библиотека для работы с DoTween: **using DG.Tweening**
 
-## Действия
-Задаются в Start()
+## Действия - Задаются в Start()
 ##
 ### DoMove
 Плавное перемещение объекта на сцене в течение указанного времени.
@@ -19,7 +18,7 @@
 * **transform.DOMove(new Vector3(0, 4, 0), 3).From(true);**
 * **From(true) значит IsRelative = true** - объект начинает движение с координаты (текущее положение + DoMove) и двигается к координатам в которых был расположен при запуске игры.
 ##
-##DoRotate
+## DoRotate
 Плавное вращение объекта на сцене в течение указанного времени.
 ###
 transform.DORotate(new Vector3(0, 360, 0), 2, RotateMode.FastBeyond360).SetLoops(-1, LoopType.Restart).SetEase(Ease.Linear);

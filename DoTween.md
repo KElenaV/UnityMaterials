@@ -43,15 +43,10 @@
 3D
 
 	private Material _material;
-
    	private void Start()
-
    	{
-
       _material = GetComponent<MeshRenderer>().material;
-
       _material.DOColor(Color.blue, 1).SetLoops(-1, LoopType.Yoyo);
-
    	}
 ###
 2D

@@ -2,7 +2,7 @@
 
 **Документация:** http://dotween.demigiant.com/documentation.php
 
-Библиотека для работы с DoTween: **using DG.Tweening**
+**Библиотека для работы с DoTween:** using DG.Tweening
 
 ## Действия - Задаются в Start()
 

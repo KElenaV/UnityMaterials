@@ -39,12 +39,16 @@
 ### DoColor
 Плавное изменение цвета материала объекта на сцене в течение указанного времени. В 3D объектах эта функция меняет цвет материала, в 2D - SpriteRenderer
 ###
-**private Material _material;
-  private void Start()
-  {
-      _material = GetComponent<MeshRenderer>().material;
-      _material.DOColor(Color.blue, 1).SetLoops(-1, LoopType.Yoyo);
-  }**
+3D
+
+** * private Material _material;
+  * private void Start()
+  * {
+  *    _material = GetComponent<MeshRenderer>().material;
+  *    _material.DOColor(Color.blue, 1).SetLoops(-1, LoopType.Yoyo);
+  * }**
 ###
-**[SerializeField] private SpriteRenderer _renderer;
-_renderer.DOColor(Color.red, 2f).SetLoops(-1, LoopType.Yoyo);**
+2D
+
+* **[SerializeField] private SpriteRenderer _renderer;
+* _renderer.DOColor(Color.red, 2f).SetLoops(-1, LoopType.Yoyo);**

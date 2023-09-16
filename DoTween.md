@@ -18,6 +18,7 @@
 * **transform.DOMove(new Vector3(0, 4, 0), 3).From(true);**
 * **From(true) значит IsRelative = true** - объект начинает движение с координаты (текущее положение + DoMove) и двигается к координатам в которых был расположен при запуске игры.
 ##
+
 ### DoRotate
 Плавное вращение объекта на сцене в течение указанного времени.
 ###
@@ -25,3 +26,25 @@
 * **RotateMode.FastBeyond360** - отлично подходит для бесконечного вращения объекта вокруг
 * **SetLoops(-1, LoopType.Restart)** - (-1) задает бесконечный цикл действий, любая другая цифра будет обозначать количество повторений, LoopType - может быть 3 видов: **Restart**, **Yoyo**, **Incremental**
 * **SetEase(Ease.Linear)** - задает характер движения. Если нужно, чтобы движение было равномерным без ускорений, замедлений - выбираем **Linear**. Если не установить данную настройку, то движение будет неравномерным - замедлятся в конце цикла и в начале вновь ускоряться.
+
+##
+### DoScale
+Плавное изменение размера объекта на сцене в течение указанного времени.
+###
+**transform.DOScale(0.5f, 1f).SetLoops(-1, LoopType.Yoyo);**
+* 0.5f - как изменяется размер относительно начального
+* 1f - скорость изменения
+
+##
+### DoColor
+Плавное изменение цвета материала объекта на сцене в течение указанного времени. В 3D объектах эта функция меняет цвет материала, в 2D - SpriteRenderer
+###
+**private Material _material;
+  private void Start()
+  {
+      _material = GetComponent<MeshRenderer>().material;
+      _material.DOColor(Color.blue, 1).SetLoops(-1, LoopType.Yoyo);
+  }**
+###
+**[SerializeField] private SpriteRenderer _renderer;
+_renderer.DOColor(Color.red, 2f).SetLoops(-1, LoopType.Yoyo);**

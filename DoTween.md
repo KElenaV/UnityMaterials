@@ -10,6 +10,7 @@
 Плавное перемещение объекта на сцене в течение указанного времени.
 ###
 Все 3 строчки идентичны
+
 	transform.DOMove(new Vector3(0, 4, 0), 3);
 	transform.DOMove(new Vector3(0, 4, 0), 3).From();
 	transform.DOMove(new Vector3(0, 4, 0), 3)From(false);

@@ -4,10 +4,11 @@
 
 **Библиотека:** using DG.Tweening
 ##
-[DoMove](#DoMove)
-[DoRotate](#DoRotate)
-[DoScale](#DoScale)
-[DoColor](#DoColor)
+* [DoMove](#DoMove)
+* [DoRotate](#DoRotate)
+* [DoScale](#DoScale)
+* [DoColor](#DoColor)
+* [Work with Text](#work-with-text)
 ##
 
 ## Действия - Задаются в Start()
@@ -59,3 +60,22 @@
 
 	[SerializeField] private SpriteRenderer _renderer;
 	_renderer.DOColor(Color.red, 2f).SetLoops(-1, LoopType.Yoyo);
+
+##
+### Work with Text
+###
+Замена начального текста на другой
+	_text.DOText("Новый текст", 3);
+Cтарый текст заменяется на новый в течение 3 секунд буква за буквой – особенно эффектно, когда старый и новый тексты одинаковой длины
+###
+Дополнение к тексту (старый + новый)
+	_text.DOText("Новый текст", 3).SetRelative();
+К старому тексту добавляется новый
+###
+Эффект взлома текста
+	_text.DOText("Новый текст", 3,true, ScrambleMode.All);
+При запуске игры появится текст из произвольных символов, в течение 3 секунд текст станет таким, каким он указан в коде\редакторе сцены.
+### 
+Замена цвета текста
+	_text.DOColor(Color.green, 3);
+Изменение цвета будет проходить плавно.

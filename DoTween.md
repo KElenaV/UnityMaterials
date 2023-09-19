@@ -3,6 +3,12 @@
 **Документация:** http://dotween.demigiant.com/documentation.php
 
 **Библиотека:** using DG.Tweening
+##
+[DoMove](#DoMove)
+[DoRotate](#DoRotate)
+[DoScale](#DoScale)
+[DoColor](#DoColor)
+##
 
 ## Действия - Задаются в Start()
 
